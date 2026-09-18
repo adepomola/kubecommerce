@@ -1,4 +1,3 @@
-
 name: KubeCommerce CI
 
 on:
@@ -40,3 +39,18 @@ jobs:
           docker build \
             -t kubecommerce-${{ matrix.service }}:${{ github.sha }} \
             services/${{ matrix.service }}
+
+  kubernetes-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Validate Kubernetes manifests
+        run: |
+          kubectl apply --dry-run=client \
+            -f kubernetes/
