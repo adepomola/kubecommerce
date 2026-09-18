@@ -1,0 +1,30 @@
+# Python
+_pycache_/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Environment files
+.env
+.env.*
+
+# Kubernetes
+*.secret.yaml
+
+# Terraform
+.terraform/
+*.tfstate
+.tfstate.
+.terraform.lock.hcl
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
