@@ -2,7 +2,7 @@
 
 **A production-style Kubernetes microservices platform** demonstrating modern DevOps practices: containerization, Kubernetes orchestration, networking, persistent storage, Helm, monitoring, CI/CD, and Infrastructure as Code.
 
-![KubeCommerce Architecture](docs/screenshots/11-KubeCommerce-Architecture-Diagram.png)
+![KubeCommerce Architecture](docs/screenshots/13-architecture-diagarm.jpeg)
 
 ---
 
@@ -36,7 +36,7 @@ The application follows a classic microservices architecture.
 **Request flow:**
 
 ```
-Client â Traefik Ingress â API Gateway â Microservices â PostgreSQL
+Client-Traefik-Ingress-API Gateway-Microservices-PostgreSQL
 ```
 
 The API Gateway communicates with the individual backend services using Kubernetes service discovery.
@@ -202,13 +202,13 @@ Traefik is used as the Kubernetes ingress controller.
 
 ```
 Client
-  â
+  
 Traefik
-  â
+  
 API Gateway
-  â
+
 Products / Orders / Users
-  â
+  
 PostgreSQL
 ```
 
@@ -244,8 +244,8 @@ The chart was successfully linted and rendered.
 
 Monitoring infrastructure was added using:
 
-- **Prometheus** â metrics collection
-- **Grafana** â visualization and dashboards
+- **Prometheus** -- metrics collection
+- **Grafana** -- visualization and dashboards
 
 Monitoring components were installed into a dedicated namespace:
 
@@ -265,15 +265,15 @@ GitHub Actions was configured for automated project validation.
 
 ```
 Git Push
-  â
+  
 GitHub Actions
-  â
+  
 Install Dependencies
-  â
+  
 Build Docker Images (products, orders, users, gateway)
-  â
+  
 Validate Kubernetes Manifests (Kubeconform)
-  â
+  
 Success
 ```
 
@@ -293,10 +293,10 @@ Terraform was integrated into KubeCommerce to demonstrate Infrastructure as Code
 
 ```
 terraform/
-âââ main.tf
-âââ providers.tf
-âââ variables.tf
-âââ outputs.tf
+ main.tf
+ providers.tf
+ variables.tf
+ outputs.tf
 ```
 
 **Resources defined**
@@ -311,9 +311,9 @@ terraform/
 
 | Command              | Result |
 |----------------------|--------|
-| `terraform init`     | â     |
-| `terraform fmt`      | â     |
-| `terraform validate` | â     |
+| `terraform init`     | passed     |
+| `terraform fmt`      |   passed   |
+| `terraform validate` |   passed   |
 
 Terraform also successfully connected to the local Kubernetes environment during earlier stages of the implementation.
 
@@ -338,69 +338,68 @@ The Terraform configuration therefore remains in the repository as a functional 
 ```
 kubecommerce/
 â
-âââ apps/
-âââ docs/
-â   âââ screenshots/
-âââ helm/
-â   âââ kubecommerce/
-âââ kubernetes/
-â   âââ deployments/
-â   âââ services/
-â   âââ ingress/
-â   âââ storage/
-âââ monitoring/
-âââ services/
-â   âââ products/
-â   âââ orders/
-â   âââ users/
-â   âââ gateway/
-âââ terraform/
-â   âââ main.tf
-â   âââ providers.tf
-â   âââ variables.tf
-â   âââ outputs.tf
-âââ .github/
-â   âââ workflows/
-â       âââ ci.yml
-âââ README.md
+ apps/
+ docs/
+ screenshots/
+ helm/
+ kubecommerce/
+ kubernetes/
+ deployments/
+ services/
+ ingress/
+ storage/
+ monitoring/
+ products/
+ orders/
+ users/
+ gateway/
+ terraform/
+ main.tf
+ providers.tf
+ variables.tf
+ outputs.tf
+ .github/
+ workflows/
+ ci.yml
+README.md
 ```
 
 ---
 
 ## Screenshots
 
-### 01 â Kubernetes Product Service
+### 01  Kubernetes Product Service
 ![Kubernetes Product Service](screenshots/01-kubernetes-product-service-Deployment-healthy.png)
 
-### 02 â Kubernetes Users Service
+### 02  Kubernetes Users Service
 ![Kubernetes Users Service](screenshots/02-kubernetes-users-service-deployment.png)
 
-### 03 â All Microservices Running
+### 03  All Microservices Running
 ![All Microservices Running](screenshots/03-kubecommerce-all-microservices-running.png)
 
-### 04 â Users Kubernetes API Test
+### 04  Users Kubernetes API Test
 ![Users Kubernetes API Test](screenshots/04-kubecommerce-users-kubernetes-API-test.png)
 
-### 05 â Kubernetes Cluster Overview
+### 05  Kubernetes Cluster Overview
 ![Kubernetes Cluster Overview](screenshots/05-kubernetes-cluster-overview.png)
 
-### 06 â API Gateway Microservices Routing
+### 06  API Gateway Microservices Routing
 ![API Gateway Microservices Routing](screenshots/06-api-gateway-microservices-routing.png)
 
-### 07 â PostgreSQL Database Healthy
+### 07  PostgreSQL Database Healthy
 ![PostgreSQL Database Healthy](screenshots/07-postgresql-database-healthy.png)
 
-### 09 â Helm Release Deployment
+### 09  Helm Release Deployment
 ![Helm Release Deployment](screenshots/09-helm-release-deployment-completed.png)
 
-### 10 â Monitoring
+### 10  Monitoring
 ![Monitoring](screenshots/10-monitoring.png)
 
-### 11 â GitHub Actions CI Success
-![GitHub Actions CI Success](screenshots/11-github-action-ci-success.png)
+### 11  GitHub Actions CI Success
+![GitHub Actions CI Success](screenshots/11-github-action-ci-succesws.png)
 
-### 12 â GitHub Actions CI/CD Success
-![GitHub Actions CI/CD Success](screenshots/12-Github-actions-cicd-success.png)
+### 12  GitHub Actions CI/CD Success
+![GitHub Actions CI/CD Success](screenshots/12-Github-actions-cicd-sucess.png)
 
 ---
 
@@ -493,25 +492,25 @@ KubeCommerce demonstrates an end-to-end DevOps workflow for a containerized micr
 
 ```
 Application Development
-        â
+        
      Docker
-        â
+        
    Kubernetes
-        â
+        
     Services
-        â
+        
    PostgreSQL
-        â
+        
 Persistent Storage
-        â
+        
   Traefik Ingress
-        â
+        
       Helm
-        â
+        
    Monitoring
-        â
+        
 GitHub Actions CI
-        â
+        
 Terraform / IaC
 ```
 
