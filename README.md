@@ -2,7 +2,7 @@
 
 **A production-style Kubernetes microservices platform** demonstrating modern DevOps practices: containerization, Kubernetes orchestration, networking, persistent storage, Helm, monitoring, CI/CD, and Infrastructure as Code.
 
-![KubeCommerce Architecture](docs/screenshots/13-architecture-diagarm.jpeg)
+![KubeCommerce Architecture](screenshots/13-architecture-diagarm.jpeg)
 
 ---
 
@@ -337,7 +337,7 @@ The Terraform configuration therefore remains in the repository as a functional 
 
 ```
 kubecommerce/
-â
+
  apps/
  docs/
  screenshots/
@@ -372,7 +372,7 @@ README.md
 ![Kubernetes Product Service](screenshots/01-kubernetes-product-service-Deployment-healthy.png)
 
 ### 02  Kubernetes Users Service
-![Kubernetes Users Service](screenshots/02-kubernetes-users-service-deployment.png)
+![Kubernetes Users Service](screenshots/02-kubernetes-users-service-deploymet.png)
 
 ### 03  All Microservices Running
 ![All Microservices Running](screenshots/03-kubecommerce-all-microservices-running.png)
@@ -399,7 +399,7 @@ README.md
 ![GitHub Actions CI Success](screenshots/11-github-action-ci-succesws.png)
 
 ### 12  GitHub Actions CI/CD Success
-![GitHub Actions CI/CD Success](screenshots/12-Github-actions-cicd-sucess.png)
+![GitHub Actions CI/CD Success](screenshots/12-Github-actions-cicid-sucess.png)
 
 ---
 
